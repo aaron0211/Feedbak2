@@ -1,10 +1,14 @@
 package com.sanvalero.feedback.model;
 
+import java.util.*;
+
 public class Equipo {
 	private String nombre;
 	private String categoria;
 	private String equipacion1;
 	private String equipacion2;
+	
+	List<Jugador> jugadores;
 	
 	public Equipo(String nombre, String categoria, String equipacion1, String equipacion2) {
 		super();
@@ -12,6 +16,8 @@ public class Equipo {
 		this.categoria = categoria;
 		this.equipacion1 = equipacion1;
 		this.equipacion2 = equipacion2;
+		
+		jugadores = new ArrayList<>();
 	}
 
 	public String getNombre() {
@@ -45,4 +51,22 @@ public class Equipo {
 	public void setEquipacion2(String equipacion2) {
 		this.equipacion2 = equipacion2;
 	}
+	
+	public boolean comprobarNumJugador(Jugador jugador) {
+		for(Jugador unJugador : jugadores) {
+			if(jugador.getNumero()==unJugador.getNumero()) {
+				return false;
+			}
+		}
+		jugadores.add(jugador);
+		return true;
+	}
+	
+	public boolean cantidadJugadores() {
+		if(jugadores.size()<23) {
+			return true;
+		}
+			return false;
+	}
+	
 }
