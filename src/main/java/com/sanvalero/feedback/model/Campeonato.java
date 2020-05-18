@@ -8,6 +8,7 @@ public class Campeonato {
 	private int n_equipos;
 	
 	private List<Partido> partidos;
+	private List<Equipo> equipos;
 	
 	public Campeonato(String nombre, String categoria, int n_equipos) {
 		super();
@@ -16,6 +17,7 @@ public class Campeonato {
 		this.n_equipos = n_equipos;
 		
 		partidos = new ArrayList<>();
+		equipos = new ArrayList<>();
 	}
 
 	public String getNombre() {

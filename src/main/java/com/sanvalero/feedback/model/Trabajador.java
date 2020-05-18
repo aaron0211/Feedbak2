@@ -3,6 +3,7 @@ package com.sanvalero.feedback.model;
 public class Trabajador extends Usuario{
 	private String perfil;
 	private String departamento;
+	
 	public Trabajador(String nombre, String apellidos, String contrasena, String email, String dni, String direccion, 
 			String perfil, String departamento) {
 		super(nombre, apellidos, contrasena, email, dni, direccion);
